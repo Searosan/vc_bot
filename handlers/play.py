@@ -34,7 +34,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="🔊 Channel",
-                        url="https://t.me/The_HellBot")
+                        url="https://t.me/teamosmani")
                    
                 ]
             ]
@@ -44,7 +44,7 @@ async def play(_, message: Message):
     url = get_url(message)
 
     if audio:
-        if round(audio.duration / 60) > DURATION_LIMIT:
+        if round(audio.duration / 45000) > DURATION_LIMIT:
             raise DurationLimitError(
                 f"**{bn} :-** ❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
             )
